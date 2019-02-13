@@ -23,15 +23,15 @@ class App
     {
         list($min, $max, $base) = $this->parseInput($input);
 
-        $matches = [];
+        $count = 0;
         for ($i = $min; $i < $max; $i++) {
             $target = base_convert($i, 10, $base);
             if ($this->specResolver->resolve($target)->isSatisfiedBy($target)) {
-                $matches[] = $target;
+                $count++;
             }
         }
 
-        return count($matches);
+        return $count;
     }
 
     private function parseInput(string $input)
