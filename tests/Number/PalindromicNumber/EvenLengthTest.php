@@ -6,7 +6,7 @@ namespace Nagoya\Doukaku14\Number\PalindromicNumber;
 
 use PHPUnit\Framework\TestCase;
 
-class EventLengthTest extends TestCase
+class EvenLengthTest extends TestCase
 {
     public function test_supports()
     {
