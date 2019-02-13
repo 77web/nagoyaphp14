@@ -16,6 +16,12 @@ class OddLength implements NumberSpecInterface
     public function isSatisfiedBy(string $target): bool
     {
         $length = strlen($target) - 1;
+
+        // 1文字は常に回文数
+        if ($length === 0) {
+            return true;
+        }
+
         $firstHalf = substr($target, 0, $length / 2);
         $secondHalf = substr($target, -1 * $length / 2);
 

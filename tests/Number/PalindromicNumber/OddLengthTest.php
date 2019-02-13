@@ -18,6 +18,7 @@ class OddLengthTest extends TestCase
     public function test_isSatisfiedBy()
     {
         $SUT = new OddLength();
+        $this->assertTrue($SUT->isSatisfiedBy('a'));
         $this->assertTrue($SUT->isSatisfiedBy('aaa'));
         $this->assertTrue($SUT->isSatisfiedBy('abcba'));
         $this->assertFalse($SUT->isSatisfiedBy('abcde'));
